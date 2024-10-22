@@ -39,6 +39,13 @@ function update() {
   }
   
   let scr = 0.02;
+  
+  if (input.isPressed) {
+    cord.length += 1;
+  } else {
+    cord.length += (cordLength - cord.length) * 0.1;
+  }
+  
   remove(pins, (p) => {
 	p.y += scr;
     box(p, 3);
