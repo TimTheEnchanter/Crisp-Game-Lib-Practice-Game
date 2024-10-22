@@ -34,9 +34,11 @@ function update() {
   }
   
   let scr = 0.02;
-  pins.forEach((p) => {
+  remove(pins, (p) => {
 	p.y += scr;
     box(p, 3);
+	
+	return p.y > 102;
   });
   
   nextPinDist -= scr;
