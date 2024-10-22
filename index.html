@@ -39,6 +39,8 @@ function update() {
   }
   
   let scr = 0.02;
+  cord.angle += 0.05;
+  line(cord.pin, vec(cord.pin).addWithAngle(cord.angle, cord.length));
   
   if (input.isPressed) {
     cord.length += 1;
